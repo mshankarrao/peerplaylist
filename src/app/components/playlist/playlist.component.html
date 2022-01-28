@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-4">
+  <div class="col-3">
     <h2>Choose Favorite</h2>
     <ul class="heroes">
       <li *ngFor="let hero of heroes; let i=index" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
@@ -9,7 +9,7 @@
 
   </div>
 
-  <div class="col-4">
+  <div class="col-3">
     <div *ngIf="selectedHero">
       <h4>Details</h4>
       <p class="card-text">{{selectedHero.album.name}}</p>
@@ -20,16 +20,22 @@
     </div>
   </div>
 
-  <div class="col-4">
+  <div class="col-3" >
     <h4>Check your Sonr Peers</h4>
-<div class="row">
-  <div class="col-3">
-    Name: 
+    <div class="row" *ngIf="selectedHero">
+      <div class="col-3">
+        Name: shankar.sonr
+      </div>
+      <div class="col-3">
+        Track Choice: Cold water 
+      </div>
+    </div>
   </div>
-  <div class="col-3">
-   Playlist preference:
-  </div>
-</div>
+
+  <div class="col-3" >
+    <h4>PeerPlay list</h4>
+    <h5>Cold Water</h5>
+    <h5>Feather touch</h5>
   </div>
 
 </div>
