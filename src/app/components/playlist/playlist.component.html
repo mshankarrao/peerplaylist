@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-4">
+    <h2>Choose Favorite</h2>
+    <ul class="heroes">
+      <li *ngFor="let hero of heroes; let i=index" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+        <span class="badge">{{i}}</span> {{hero.album.artists[0].name}}
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="col-4">
+    <div *ngIf="selectedHero">
+      <h4>Details</h4>
+      <p class="card-text">{{selectedHero.album.name}}</p>
+      <br>
+      <a href="{{selectedHero.external_urls.spotify}}" for="hero-name" target="_blank">Click to listen in Spotify</a>
+      <br>
+      <div><span>Name: </span>{{selectedHero.album.artists[0].name}}</div>
+    </div>
+  </div>
+
+  <div class="col-4">
+    <h4>Check your Sonr Peers</h4>
+<div class="row">
+  <div class="col-3">
+    Name: 
+  </div>
+  <div class="col-3">
+   Playlist preference:
+  </div>
+</div>
+  </div>
+
+</div>
