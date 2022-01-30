@@ -13,7 +13,7 @@ export class SpotifyService {
   getRecommendations() {
     const headers = new HttpHeaders()
       .set('content-type', 'application/json')
-      .set('Authorization', 'Bearer BQBEBnNtGHoZfRLtZoG3gLfNg7ZmCCmiZaffrF13SNXH5QuHdlpCgSvmbSFRCPZKu3kzDipVGt9lPHzPncjPMDpiozhzKf7CZOThpBT9vpRDgo6l00a0ySdwTIvCCIJTCwsQILQ2lebssV4ueh8qgYBSlItoG6hQh2g');
+      .set('Authorization', 'Bearer BQAgjf71KCf83U3dIDaaWRlqgEQh0MyucaAP9bzR5sT2_Suzk601QmD_7PTZWH4Kk8-ch65tk_LMDcAgCL4OGaZ62wA5bCLh9WVh_MmjeBQ_tmjroP25YWDTKSmwtA0U_QRT7HUYaaDDKOU7AUtCGWlz_0ckLPSBJ0E');
     return this.httpClient.get("https://api.spotify.com/v1/recommendations?limit=10&market=ES&seed_artists=&seed_genres=classical,country,jazz,hiphop",{ 'headers': headers });
   }
 
